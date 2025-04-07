@@ -1,0 +1,8 @@
+services:
+  wifi_monitor:
+    build: .
+    container_name: wifi-ping-monitor
+    volumes:
+      - .:/app
+    env_file:
+      - .env
