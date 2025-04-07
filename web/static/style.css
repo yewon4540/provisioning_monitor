@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #fefefe;
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+th:hover {
+    background-color: #e0e0e0;
+}
+
+.ok, .fail {
+    font-size: 1.2em;  /* 기본 크기보다 1.5배 */
+    font-weight: bold;
+}
+
+.ok {
+    color: green;
+}
+
+.fail {
+    color: orange;
+}

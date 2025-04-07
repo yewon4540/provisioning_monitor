@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>네트워크 상태 대시보드</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='sort.js') }}"></script>
+</head>
+<body>
+    <h1>📡 네트워크 상태 대시보드</h1>
+    <table id="statusTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">호칭</th>
+                <th onclick="sortTable(1)">위치</th>
+                <th onclick="sortTable(2)">IP</th>
+                <th onclick="sortTable(3)">상태</th>
+                <th onclick="sortTable(4)">응답 시간</th>
+                <th onclick="sortTable(5)">확인 시간</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for router in routers %}
+            <tr>
+                <td>{{ router.name }}</td>
+                <td>{{ router.location }}</td>
+                <td>{{ router.ip }}</td>
+                <td class="{{ 'ok' if router.status == '✅' else 'fail' }}">{{ router.status }}</td>
+                <td>
+                    {% if router.during is not none %}
+                        {{ router.during }} ms
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+                <td>{{ router.datetime or '-' }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
