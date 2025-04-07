@@ -31,7 +31,7 @@ th:hover {
 }
 
 .ok, .fail {
-    font-size: 1.2em;  /* 기본 크기보다 1.5배 */
+    font-size: 1.2em;
     font-weight: bold;
 }
 
