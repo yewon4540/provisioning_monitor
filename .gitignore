@@ -1,11 +1,32 @@
+# 환경 설정 파일
 .env
 .env.*
+
+# Jupyter Notebook 파일
 note.ipynb
+
+# 가상 환경
 venv/
 .venv/
+
+# Python 캐시 파일들
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# 데이터베이스 파일
 *.db
+
+# 로그 파일
 *.log
+
+# Terraform 관련
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+*.tfstate.*
+
+# 로컬 실험 및 출력 파일
+crash.log
