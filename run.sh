@@ -7,7 +7,8 @@ if [ -z "$1" ]; then
 fi
 
 PORT=$1
+LOGFILE="flask_$PORT.log"
 
-# Python 스크립트 실행
-python3 app.py "$PORT"
+# 백그라운드 실행 & 로그 저장
+nohup python3 app.py "$PORT" > "$LOGFILE" 2>&1 &
 
