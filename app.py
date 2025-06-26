@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return f"Flask 서버가 {request.host} 에서 실행 중입니다.✌️"
+    return f"Flask 서버가 {port} 포트에서 실행 중입니다.✌️"
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
